@@ -6,7 +6,7 @@
 
 <h1 align="center">Tiny Light · SK-10</h1>
 
-<p align="center"><strong>Softera Lab soldering kit — pocket LED light · USB-C charge · CR2032</strong></p>
+<p align="center"><strong>Softera Lab soldering kit — pocket LED light · USB-C · CR2032</strong></p>
 
 <p align="center">
   <a href="README.uk.md"><img alt="UA" src="https://img.shields.io/badge/UA-README.uk.md-F97316?style=flat-square"></a>
@@ -22,9 +22,9 @@
   <img src="docs/assets/images/en/banner.png" alt="Tiny Light SK-10" width="720">
 </p>
 
-**Tiny Light · SK-10** is a compact Softera Lab soldering kit: after assembly you get a small LED light with a **USB-C** charge port, **TP4054** charge IC, power **Switch**, **Light** button, and a **5 mm** LED.
+**Tiny Light · SK-10** is a compact Softera Lab soldering kit: after assembly you get a pocket LED light with a modern **USB-C** charge port, **TP4054** charge IC, power **Switch**, **Light** button, and a **5 mm** LED.
 
-It can run from **three power sources**: **USB-C**, a **CR2032** coin cell (included), or a **Li-ion / LiPo** pack on pads **B(+) / B(−)**.
+It runs from **three power sources**: **USB-C**, a **CR2032** coin cell (included), or a **Li-ion / LiPo** pack on pads **B(+) / B(−)**.
 
 This repository is a **product page and assembly guide**. It is **not open-source hardware** — Gerbers and manufacturing files are not published.
 
@@ -33,54 +33,50 @@ This repository is a **product page and assembly guide**. It is **not open-sourc
 ## How it works
 
 <p align="center">
-  <img src="docs/assets/images/en/how-it-works.png" alt="How Tiny Light works" width="720">
+  <img src="docs/assets/images/en/how-it-works.png" alt="How Tiny Light works" width="720"><br>
+  <em>Power path: USB-C / battery → Switch → Light button → 5 mm LED</em>
 </p>
 
-1. **USB-C** — power from the cable and charge path via **TP4054 (U1)**; **CHARGE** LED shows charging  
-2. **CR2032** — coin cell (included) in the back holder  
+1. **USB-C** — power from the cable; charge via **TP4054 (U1)** with **CHARGE** LED  
+2. **CR2032** — coin cell in the back holder (included)  
 3. **Li-ion / LiPo** — optional pack on **B(+) / B(−)**  
 4. **Switch** — power on / off  
 5. **Light** button — control the main LED  
-6. **LED (+ / −)** — through-hole **5 mm** lamp (observe polarity)  
+6. **LED (+ / −)** — through-hole **5 mm** (observe polarity)  
 
 <p align="center">
-  <img src="docs/assets/images/en/ready.png" alt="Assembled Tiny Light" width="720">
+  <img src="docs/assets/images/en/ready.png" alt="Assembled Tiny Light" width="720"><br>
+  <em>Assembled Tiny Light with the main LED on</em>
 </p>
 
-## Power protection
+## Power sources
 
 <p align="center">
-  <img src="docs/assets/images/en/protection.png" alt="USB-C diodes CR2032 protection" width="720">
+  <img src="docs/assets/images/en/power-sources.png" alt="Power sources" width="720"><br>
+  <em>USB-C · CR2032 · Li-ion — automatic Power-OR via Schottky diodes D1/D2</em>
 </p>
 
-Protection diodes (**D1 / D2**, Schottky **SS14**) form a **Power-OR**: the light can take power from **USB-C**, the **CR2032** cell, or a **Li-ion** pack, with reverse-current protection so the sources stay safe together.
-
-<p align="center">
-  <img src="docs/assets/images/en/schematic-block.png" alt="Schematic snippet — charge and protection" width="720">
-</p>
-
-Schematic snippet: **USB-C → D1/D2 → TP4054 → battery**, plus **Switch / Light** and the main LED with **R1 220 Ω**.
+**D1 / D2** (SS14) let the board take power safely from **USB-C**, the **CR2032**, or a **Li-ion** pack without backfeeding between sources.
 
 ## About the kit
 
 | Zone | What you get |
 | --- | --- |
-| **Light** | 5 mm LED pads with **+ / −** · current limit **R1 220 Ω** (221) |
+| **Light** | 5 mm LED pads with **+ / −** · **R1 220 Ω** (221) |
 | **Controls** | Slide **Switch** · tactile **Light** button |
 | **Charge** | **USB-C** · **U1 TP4054** · **CHARGE** · **R2 1 kΩ** · **R3 3 kΩ** · **C1/C2 1 µF** |
 | **Power** | **USB-C** · **CR2032** (kit) · optional **Li-ion** on **B(+) / B(−)** |
-| **Practice** | Mix of SMD passives, charge IC, USB-C, button, switch, THT LED |
 
-There is **no microcontroller** — discrete charge + switch + LED circuit.
-
-Step-by-step: [`docs/en/`](docs/en/).
+No microcontroller — discrete charge + switch + LED circuit. Guides: [`docs/en/`](docs/en/).
 
 <p align="center">
-  <img src="docs/assets/images/en/board-front.png" alt="Front — Tiny Light footprints" width="720">
+  <img src="docs/assets/images/en/board-front.png" alt="Board front" width="720"><br>
+  <em>Front — USB-C, TP4054, Switch, Light button, LED pads</em>
 </p>
 
 <p align="center">
-  <img src="docs/assets/images/en/board-back.png" alt="Back — CR2032 and SofteraLab" width="720">
+  <img src="docs/assets/images/en/board-back.png" alt="Board back" width="720"><br>
+  <em>Back — CR2032 holder and SofteraLab marking</em>
 </p>
 
 ## Specifications
@@ -88,10 +84,10 @@ Step-by-step: [`docs/en/`](docs/en/).
 | Parameter | Value |
 | --- | --- |
 | Product | Tiny Light · **SK-10** |
-| Charge port | **USB-C** only |
+| Charge port | **USB-C** |
 | Charge IC | **TP4054** (U1) |
 | Protection | **D1 / D2** SS14 Schottky (Power-OR) |
-| Power sources | **USB-C** · **CR2032** · **Li-ion / LiPo** on **B(+) / B(−)** |
+| Power sources | **USB-C** · **CR2032** · **Li-ion / LiPo** |
 | Battery in kit | **CR2032** |
 | Main LED | Through-hole **5 mm** |
 | Controls | Slide switch + push button |
@@ -100,67 +96,49 @@ Step-by-step: [`docs/en/`](docs/en/).
 ## What's in the kit
 
 <p align="center">
-  <img src="docs/assets/images/en/kit-contents.png" alt="Kit contents" width="720">
+  <img src="docs/assets/images/en/kit-contents.png" alt="Kit contents" width="720"><br>
+  <em>14 parts + 5 practice LEDs</em>
 </p>
 
-**14 parts** + **5 LEDs of different types** (practice / spare).
-
-Includes among the 14:
-
-1. Tiny Light PCB (**SK-10**)  
-2. **USB-C** connector  
-3. Charge IC **TP4054** (U1)  
-4. Resistors **R1 220 Ω** · **R2 1 kΩ** · **R3 3 kΩ** (codes 221 / 102 / 302)  
-5. Capacitors **C1 · C2** — **1 µF** each  
-6. **CHARGE** indicator LED  
-7. Slide **Switch**  
-8. Tactile **Light** button  
-9. **CR2032** holder  
-10. **CR2032** cell  
-11. Main **5 mm** LED and the rest of the packed **14-piece** set  
-
-Plus **5 different LEDs** for experiments and polarity practice.
+**14 parts** + **5 LEDs of different types** (practice / spare), including: PCB **SK-10**, **USB-C**, **TP4054**, **R1–R3**, **C1/C2**, **CHARGE** LED, **Switch**, **Light** button, **CR2032** holder and cell, main **5 mm** LED.
 
 ## Assembly (short)
 
-1. Solder SMD passives **R1–R3**, **C1**, **C2**  
-2. Solder **U1 TP4054** and **CHARGE** LED  
-3. Solder **USB-C**  
-4. Solder **Switch** and **Light** button  
-5. Solder the main **5 mm** LED (**+ / −**)  
-6. Mount **CR2032** holder on the back · insert cell  
-7. Power **Switch** on → press **Light** → LED on  
+1. SMD passives **R1–R3**, **C1**, **C2**  
+2. **U1 TP4054** and **CHARGE** LED  
+3. **USB-C**  
+4. **Switch** and **Light** button  
+5. Main **5 mm** LED (**+ / −**)  
+6. **CR2032** holder on the back · insert cell  
+7. **Switch** on → **Light** → LED on  
 
 Full order: [docs/en/02-getting-started.md](docs/en/02-getting-started.md).
 
 ## Learning cards
 
 <p align="center">
-  <img src="docs/assets/images/en/component-map-clean-v1.png" alt="Component map" width="720">
+  <img src="docs/assets/images/en/component-map-clean-v1.png" alt="Component map" width="720"><br>
+  <em>Component map — where each part sits on the board</em>
 </p>
 
 <p align="center">
-  <img src="docs/assets/images/en/tp4054-diodes.png" alt="TP4054 and diodes D1/D2" width="720">
+  <img src="docs/assets/images/en/tp4054-diodes.png" alt="TP4054 and diodes" width="720"><br>
+  <em>TP4054 pinout and Schottky diodes D1/D2 (Power-OR)</em>
 </p>
 
 <p align="center">
-  <img src="docs/assets/images/en/power-sources.png" alt="Power sources" width="720">
+  <img src="docs/assets/images/en/two-modes.png" alt="Two operating modes" width="720"><br>
+  <em>Two modes: Switch ON for constant light, or hold KEY</em>
 </p>
 
 <p align="center">
-  <img src="docs/assets/images/en/what-is-diode.png" alt="What is a diode" width="720">
+  <img src="docs/assets/images/en/usb-solder.png" alt="Soldering USB-C" width="720"><br>
+  <em>Soldering the USB-C connector — order of pads</em>
 </p>
 
 <p align="center">
-  <img src="docs/assets/images/en/two-modes.png" alt="Two operating modes" width="720">
-</p>
-
-<p align="center">
-  <img src="docs/assets/images/en/usb-solder.png" alt="Soldering USB-C" width="720">
-</p>
-
-<p align="center">
-  <img src="docs/assets/images/en/battery-wiring-fixed.png" alt="Battery wiring" width="720">
+  <img src="docs/assets/images/en/battery-wiring-fixed.png" alt="Battery wiring" width="720"><br>
+  <em>Battery wiring — red to B(+), black to B(−)</em>
 </p>
 
 ## Guides

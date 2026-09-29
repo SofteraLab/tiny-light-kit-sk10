@@ -29,7 +29,7 @@ description: Assembly order for Tiny Light SK-10.
 - **14 parts**  
 - **5 LEDs of different types**  
 - **CR2032** cell included  
-- Charge port: **USB-C** only (no micro-USB)
+- Charge port: **USB-C**
 
 ## Power sources
 

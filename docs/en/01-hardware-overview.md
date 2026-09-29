@@ -17,9 +17,7 @@ It can run from **USB-C**, a **CR2032** coin cell, or a **Li-ion / LiPo** pack o
 
 ![Back](../assets/images/en/board-back.png)
 
-![Power protection](../assets/images/en/protection.png)
-
-![Schematic overview](../assets/images/en/schematic-block.png)
+![Power sources](../assets/images/en/power-sources.png)
 
 | Zone | Content |
 | --- | --- |
@@ -28,7 +26,7 @@ It can run from **USB-C**, a **CR2032** coin cell, or a **Li-ion / LiPo** pack o
 | Switch | Power slide switch |
 | CHARGE | Charge indicator |
 | U1 | **TP4054** |
-| USB-C | Charge port (USB-C only in this kit) |
+| USB-C | Charge port |
 | D1 / D2 | Schottky **SS14** (Power-OR) |
 | B(+) / B(−) | **CR2032** cell or **Li-ion** pack |
 | Back | **CR2032** holder, SofteraLab marking |

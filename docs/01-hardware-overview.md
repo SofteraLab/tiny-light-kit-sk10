@@ -17,9 +17,7 @@ description: Tiny Light SK-10 — USB-C, TP4054, CR2032, Switch, Light, LED 5 м
 
 ![Тильна сторона](./assets/images/uk/board-back.png)
 
-![Захист живлення](./assets/images/uk/protection.png)
-
-![Фрагмент схеми](./assets/images/uk/schematic-block.png)
+![Джерела живлення](./assets/images/uk/power-sources.png)
 
 | Зона | Вміст |
 | --- | --- |
@@ -28,7 +26,7 @@ description: Tiny Light SK-10 — USB-C, TP4054, CR2032, Switch, Light, LED 5 м
 | Switch | Слайдер живлення |
 | CHARGE | Індикатор зарядки |
 | U1 | **TP4054** |
-| USB-C | Порт зарядки (лише USB-C у наборі) |
+| USB-C | Порт зарядки |
 | D1 / D2 | Schottky **SS14** (Power-OR) |
 | B(+) / B(−) | Батарейка **CR2032** або акумулятор **Li-ion** |
 | Тил | Тримач **CR2032**, брендинг SofteraLab |
